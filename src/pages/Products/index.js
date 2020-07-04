@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import user from '../../assets/userImage.svg';
+import user from '../../assets/artelivre.png';
 import HeaderComponent from '../Components/HeaderComponent'
-import {Container, SliderSmall, Content, ArtMenu, ArtContainer, Title, Description, ProductImage,
-  MenuSide, MenuItem, MenuButton, MenuText, MenuContent, ProductContainer, Bar, ProductPrice, ProductUser, UserImage,UserName, ImageContainer} from'./styles';
+import {Container, SliderSmall, Content, ArtMenu, ArtContainer, Title, Description, ProductImage,ProductImageContainer,
+  MenuSide, MenuItem, MenuButton, MenuText, MenuContent, ProductContainer, Bar, ProductPrice, ProductUser, UserImage,UserName, ImageContainer,ProductName} from'./styles';
   import api from '../services/ml';
 
 
@@ -14,7 +14,7 @@ function Products() {
   //useEffects
   useEffect(() => {
     async function fetchData() { 
-      const result = await api.get('/search?category=MLB1368&limit=3');
+      const result = await api.get('/search?category=MLB1368&limit=4');
         setDadosCategoria(result.data.results);   
         console.log(dadosCategoria);
     }
@@ -68,14 +68,18 @@ function Products() {
           <ArtContainer>
             {dadosCategoria.map( product =>(              
               <ProductContainer key={product.id}>
-              <ProductImage></ProductImage>
+                <ProductImageContainer>
+                  <ProductImage src={product.thumbnail} alt="produto"/>
+                </ProductImageContainer>
+            
               <Bar/>
-            <ProductPrice>R$ {product.price}</ProductPrice>
+              <ProductPrice>R$ {product.price}</ProductPrice>
+              <ProductName>{product.title}</ProductName>
               <ProductUser>
               <ImageContainer>
                   <UserImage src={user} alt="produto"/>
                 </ImageContainer>
-                <UserName>{product.title}</UserName>
+                <UserName>Nome</UserName>
               </ProductUser>
               </ProductContainer>
 

@@ -159,7 +159,7 @@ export const Product= styled.div`
 
 
 export const ProductBar= styled.div`
-    margin-top: 220px;
+    margin-top: 10px;
     width: 224px;
     height: 2px;
     background: #EAEAEA;
@@ -175,10 +175,33 @@ export const ProductPrice= styled.p`
     padding:10px;
 `;
 
+
+
 export const ProductPriceText= styled.p`
 
 `;
 
+export const ProductName= styled.p`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0 10px;
+   
+   
+`;
+
+export const ProductImageContainer = styled.div`
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+`;
+
+export const ProductImage = styled.img`
+    width: 150px;
+    height: 150px;
+`;
 
 
 

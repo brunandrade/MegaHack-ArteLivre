@@ -127,16 +127,23 @@ export const ProductContainer = styled.div`
   
 `; 
 
-export const ProductImage = styled.img`
-    
+export const ProductImageContainer = styled.div`
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+`;
 
+export const ProductImage = styled.img`
+    width: 200px;
+    height: 200px;
 `;
 
 export const Bar = styled.div`  
    width: 283.92px;
     height: 2.54px;
     background: #EAEAEA;
-    margin-top:260px;
+    margin-top:20px;
 `; 
 
 export const ProductPrice = styled.p`  
@@ -149,8 +156,18 @@ export const ProductPrice = styled.p`
     padding:20px;
     color: #333333;
 `; 
+export const ProductName= styled.p`
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0 20px;
+    width:300px;
+`;
+
 
 export const ProductUser = styled.div` 
+    position:absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -160,7 +177,7 @@ export const ProductUser = styled.div`
     height: 47px;
     background: #1F6CDB;
     border-radius: 3px; 
-    margin-top:150px;
+    margin-top:100px;
    
 `; 
 export const ImageContainer = styled.div`  
@@ -175,15 +192,17 @@ export const ImageContainer = styled.div`
 `; 
 
 export const UserImage = styled.img`  
-        
+    width: 52px;
+    height: 52px;
 `; 
 
-export const UserName = styled.p`  
-   font-family: Roboto;
+export const UserName = styled.p` 
+    position:absolute; 
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     letter-spacing: 0.015em;
-    margin-right:20px;
+    padding:0 70px;
     color: #FFFFFF;
 `; 

@@ -1,29 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import banner from '../../assets/banner.jpg';
 import HeaderComponent from '../Components/HeaderComponent'
-import {Container,Slider, PaymentInfo, Content, PaymentContainer, PaymentText, PaymentDescription,PaymentButton, 
+import {Container,Slider, PaymentInfo, Content, PaymentContainer, PaymentText, PaymentDescription,PaymentButton, ProductName,ProductImageContainer,ProductImage,
   BlueBar,GrayBar, PaymentContent, HistoryText, HistoryButton, ProductContainer, HistoryTitle, Product, ProductBar, ProductPrice, ProductPriceText, SliderImage} from'./styles';
 import api from '../services/ml';
 
 function Home() {
-//   const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState([]);
 
-//   useEffect(() => {
-//     api.get('/search?category=MLB1368').then((response) => {
-//       setProducts(response.data.results);
 
-//       console.log(products);
-//     })
-// }, []);
-  
+  //useEffects
+  useEffect(() => {
+    async function fetchData() { 
+      const result = await api.get('/search?category=MLB1051&limit=5');
+      setProduct(result.data.results);   
+        console.log(product);
+    }
+    fetchData();
+  }, [product.length]);
 
-  // getProducts();
-
-  // async function getProducts(){
-  //   const response = await api.get('/search?category=MLB1368', {
-  //     products,
-  //   });
-  // }
 
   return (
       <Container>
@@ -67,45 +62,24 @@ function Home() {
             <HistoryText>Baseada na sua última visita</HistoryText>
             <HistoryButton>Ver histórico</HistoryButton>
           </HistoryTitle>
-          
-          <ProductContainer>
-            <Product>
-              <ProductBar/>
-              <ProductPrice>
-                <ProductPriceText>R$ 30,00</ProductPriceText>              
-              </ProductPrice>
-            </Product>
+          <ProductContainer >
+          {product.map(item=>(                
+                <Product key={item.id}>
+                   <ProductImageContainer>
+                    <ProductImage src={item.thumbnail} alt="produto"/>
+                  </ProductImageContainer>
 
-            <Product>
-              <ProductBar/>
-              <ProductPrice>
-                <ProductPriceText>R$ 30,00</ProductPriceText>              
-              </ProductPrice>
-            </Product>
+                  <ProductBar/>
 
-            <Product>
-              <ProductBar/>
-              <ProductPrice>
-                <ProductPriceText>R$ 30,00</ProductPriceText>              
-              </ProductPrice>
-            </Product>
+                  <ProductPrice>
+                    <ProductPriceText>R$ {item.price}</ProductPriceText>              
+                  </ProductPrice>
+                  <ProductName>{item.title}</ProductName>
+                </Product>                  
+             
+          ))}
+         </ProductContainer>
 
-            <Product>
-              <ProductBar/>
-              <ProductPrice>
-                <ProductPriceText>R$ 30,00</ProductPriceText>              
-              </ProductPrice>
-            </Product>
-
-            <Product>
-              <ProductBar/>
-              <ProductPrice>
-                <ProductPriceText>R$ 30,00</ProductPriceText>              
-              </ProductPrice>
-            </Product>
-            
-            
-          </ProductContainer>
         </Content>        
 
       </Container>
