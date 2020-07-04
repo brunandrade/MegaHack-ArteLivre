@@ -12,11 +12,17 @@ export const Container = styled.div`
 
 export const Slider = styled.div`
     display: flex;   
-    align-items:center;   
+    align-items:center; 
+    justify-content:center;  
     width: 100%;
     height: 336px;
-    background: #1F6CDB;
+    
 `; 
+
+export const SliderImage= styled.img`
+
+`;
+
 
 export const Content = styled.div`
     display: flex;   
@@ -172,6 +178,7 @@ export const ProductPrice= styled.p`
 export const ProductPriceText= styled.p`
 
 `;
+
 
 
 

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import banner from '../../assets/banner.jpg';
 import HeaderComponent from '../Components/HeaderComponent'
 import {Container,Slider, PaymentInfo, Content, PaymentContainer, PaymentText, PaymentDescription,PaymentButton, 
-  BlueBar,GrayBar, PaymentContent, HistoryText, HistoryButton, ProductContainer, HistoryTitle, Product, ProductBar, ProductPrice, ProductPriceText} from'./styles';
-//import api from '../services/ml';
+  BlueBar,GrayBar, PaymentContent, HistoryText, HistoryButton, ProductContainer, HistoryTitle, Product, ProductBar, ProductPrice, ProductPriceText, SliderImage} from'./styles';
+import api from '../services/ml';
 
 function Home() {
 //   const [products, setProducts] = useState([]);
@@ -29,7 +30,7 @@ function Home() {
           <HeaderComponent/>
 
         <Slider>
-
+          <SliderImage src={banner}/>
         </Slider>
 
         <Content>
