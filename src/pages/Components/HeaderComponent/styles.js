@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 
 
-
-export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-
-`; 
-
 export const Header = styled.div`
     display: flex;
     width:100%;
@@ -188,12 +181,4 @@ export const UserInfoItem = styled.button`
     &:hover {
         opacity:0.6;
     } 
-`; 
-
-export const Slider = styled.div`
-    display: flex;   
-    align-items:center;   
-    width: 100%;
-    height: 336px;
-    background: #1F6CDB;
 `; 
