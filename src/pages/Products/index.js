@@ -1,10 +1,26 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import user from '../../assets/userImage.svg';
 import HeaderComponent from '../Components/HeaderComponent'
-import {Container, SliderSmall, Content, ArtMenu, ArtContainer, Title, Description,
+import {Container, SliderSmall, Content, ArtMenu, ArtContainer, Title, Description, ProductImage,
   MenuSide, MenuItem, MenuButton, MenuText, MenuContent, ProductContainer, Bar, ProductPrice, ProductUser, UserImage,UserName, ImageContainer} from'./styles';
+  import api from '../services/ml';
+
 
 function Products() {
+  //CONSTANTS
+  const [dadosCategoria, setDadosCategoria] = useState([]);
+
+
+  //useEffects
+  useEffect(() => {
+    async function fetchData() { 
+      const result = await api.get('/search?category=MLB1368&limit=3');
+        setDadosCategoria(result.data.results);   
+        console.log(dadosCategoria);
+    }
+    fetchData();
+  }, [dadosCategoria.length]);
+
   return (
       <Container>
           <HeaderComponent/>
@@ -18,6 +34,7 @@ function Products() {
             <MenuSide>
               <MenuContent>
                 <MenuText>Localização</MenuText>
+                
                 <MenuItem>São Paulo (100)</MenuItem>
                 <MenuItem>Rio de Janeiro (75)</MenuItem>
                 <MenuItem>Salvador (70)</MenuItem>
@@ -49,51 +66,24 @@ function Products() {
           </ArtMenu>
 
           <ArtContainer>
+            {dadosCategoria.map( product =>(              
+              <ProductContainer key={product.id}>
+              <ProductImage></ProductImage>
+              <Bar/>
+            <ProductPrice>R$ {product.price}</ProductPrice>
+              <ProductUser>
+              <ImageContainer>
+                  <UserImage src={user} alt="produto"/>
+                </ImageContainer>
+                <UserName>{product.title}</UserName>
+              </ProductUser>
+              </ProductContainer>
+
+            ))
+            }
             
-            <ProductContainer>
-              <Bar/>
-              <ProductPrice>R$ 30</ProductPrice>
-              <ProductUser>
-              <ImageContainer>
-                  <UserImage src={user} alt="Usuário"/>
-                </ImageContainer>
-                <UserName>Flores Artesanato</UserName>
-              </ProductUser>
-            </ProductContainer>
 
-            <ProductContainer>
-              <Bar/>
-              <ProductPrice>R$ 30</ProductPrice>
-              <ProductUser>
-              <ImageContainer>
-                  <UserImage src={user} alt="Usuário"/>
-                </ImageContainer>
-                <UserName>Flores Artesanato</UserName>
-              </ProductUser>
-            </ProductContainer>
-
-            <ProductContainer>
-              <Bar/>
-              <ProductPrice>R$ 30</ProductPrice>
-              <ProductUser>
-              <ImageContainer>
-                  <UserImage src={user} alt="Usuário"/>
-                </ImageContainer>
-                <UserName>Flores Artesanato</UserName>
-              </ProductUser>
-            </ProductContainer>
-
-            <ProductContainer>
-              <Bar/>
-              <ProductPrice>R$ 30</ProductPrice>
-              <ProductUser>
-                <ImageContainer>
-                  <UserImage src={user} alt="Usuário"/>
-                </ImageContainer>
-               
-                <UserName>Flores Artesanato</UserName>
-              </ProductUser>
-            </ProductContainer>
+            
             
           </ArtContainer>
         </Content>

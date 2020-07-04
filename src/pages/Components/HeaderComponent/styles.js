@@ -63,7 +63,7 @@ export const InfoIcon = styled.img`
         
 `;
 
-export const InfoText = styled.text`
+export const InfoText = styled.p`
     margin-Right:10px;
     font-family: Roboto, sans-serif;
     font-style: normal;

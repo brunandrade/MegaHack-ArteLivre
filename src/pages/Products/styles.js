@@ -127,6 +127,11 @@ export const ProductContainer = styled.div`
   
 `; 
 
+export const ProductImage = styled.img`
+    
+
+`;
+
 export const Bar = styled.div`  
    width: 283.92px;
     height: 2.54px;
