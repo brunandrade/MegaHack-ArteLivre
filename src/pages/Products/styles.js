@@ -54,13 +54,12 @@ export const Description = styled.p`
 
 export const MenuSide = styled.div`
     width:200px;
-    justify-content: start;
+
 `; 
 
 export const MenuContent = styled.div`
     display: flex;   
-    flex-direction: column;
-    justify-content: normal;
+    flex-direction: column;   
 `; 
 
 export const MenuText = styled.p`
@@ -74,7 +73,8 @@ export const MenuText = styled.p`
     margin-bottom:10px;
 `; 
 
-export const MenuItem = styled.button`
+export const MenuItem = styled.button`  
+    display:flex;
     background: transparent;
     border:0;   
     font-family: Roboto;
@@ -84,12 +84,14 @@ export const MenuItem = styled.button`
     line-height: 24px;
     letter-spacing: 0.015em;
     color: #6C6C6C;    
+    margin-left:10px;
     &:hover {
         opacity:0.6;
     } 
 `; 
 
 export const MenuButton = styled.button`
+    display:flex;
     background: transparent;
     border:0;
     font-family: Roboto;
@@ -100,6 +102,8 @@ export const MenuButton = styled.button`
     letter-spacing: 0.015em;
     margin-bottom:20px;
     color: #5697FA;
+    margin-top:10px;
+    margin-left:10px;
 
     &:hover {
         opacity:0.6;
@@ -162,13 +166,13 @@ export const ImageContainer = styled.div`
     border-radius: 30px;
     background-color:#FFF;
     margin-bottom:20px;
+    
+`; 
 
-    
-`; 
 export const UserImage = styled.img`  
-    
-    
+        
 `; 
+
 export const UserName = styled.p`  
    font-family: Roboto;
     font-style: normal;

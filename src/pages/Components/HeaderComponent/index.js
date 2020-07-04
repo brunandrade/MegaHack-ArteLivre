@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { FiSearch, FiShoppingCart } from 'react-icons/fi';
+import{Link} from 'react-router-dom';
 import logo from '../../../assets/logo.svg';
 import freteIcon from '../../../assets/freteIcon.svg';
 import location from '../../../assets/location.svg';
@@ -12,7 +13,7 @@ import {Header, HeaderContent, MenuContent, Logo, SearchBar, SearchInput, Search
 class HeaderComponent extends Component{
     render(){
         return(
-<Header>
+    <Header>
         <HeaderContent>
           <Logo src={logo} alt="Mercado Livre"/>
 
@@ -47,7 +48,10 @@ class HeaderComponent extends Component{
             <MenuItem>Lojas Oficiais</MenuItem>
             <MenuItem>Vender</MenuItem>
             <MenuItem>Contato</MenuItem>
-            <MenuItemPrincipal>Arte Livre</MenuItemPrincipal>              
+            <Link to="/artelivre">
+              <MenuItemPrincipal>Arte Livre</MenuItemPrincipal>   
+            </Link>
+                       
           </Menu>
 
           <UserInfo>
