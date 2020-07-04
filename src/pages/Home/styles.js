@@ -105,9 +105,27 @@ export const Menu = styled.div`
 `; 
 
 export const MenuItem = styled.button`
+
+    background-color: Transparent;
+    border: none;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #656565;
         
 `; 
 export const MenuItemPrincipal = styled.button`
+
+    background: #1F6CDB;
+    border-radius: 3px;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFF;
         
 `; 
 
@@ -116,5 +134,13 @@ export const UserInfo = styled.div`
 `; 
 
 export const UserInfoItem = styled.button`
-        
+
+    background-color: Transparent;
+    border: none;
+    
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #070707;
 `; 
