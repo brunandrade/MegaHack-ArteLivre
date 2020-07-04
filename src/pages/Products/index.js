@@ -1,12 +1,12 @@
 import React from 'react';
+import HeaderComponent from '../Components/HeaderComponent'
+import {Container} from'./styles';
 
 function Products() {
   return (
-    <div className="App">    
-        <p>
-        Arte livre
-        </p>
-    </div>
+      <Container>
+          <HeaderComponent/>
+      </Container>
   );
 }
 
