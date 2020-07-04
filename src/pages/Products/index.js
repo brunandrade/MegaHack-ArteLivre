@@ -10,11 +10,20 @@ function Products() {
   //CONSTANTS
   const [dadosCategoria, setDadosCategoria] = useState([]);
 
+  //FUNCTIONS
+  async function getSeller(seller_id) { 
+    const result = await api.get('/search?seller_id='+ seller_id);
+    return (result.data.seller.nickname);
+  }
 
   //useEffects
   useEffect(() => {
-    async function fetchData() { 
-      const result = await api.get('/search?category=MLB1368&limit=4');
+    async function fetchData() {
+      var result = []
+      result = await api.get('/search?category=MLB1368&limit=4');
+        result.data.results.map( async function(product) {
+          product.sellerNickname = await getSeller(product.seller.id);
+        })
         setDadosCategoria(result.data.results);   
         console.log(dadosCategoria);
     }
@@ -79,7 +88,7 @@ function Products() {
               <ImageContainer>
                   <UserImage src={user} alt="produto"/>
                 </ImageContainer>
-                <UserName>Nome</UserName>
+                <UserName>{product.sellerNickname}</UserName>
               </ProductUser>
               </ProductContainer>
 
