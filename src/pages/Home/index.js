@@ -5,7 +5,8 @@ import freteIcon from '../../assets/freteIcon.svg';
 import location from '../../assets/location.svg';
 
 import {Container, Header, HeaderContent, MenuContent, Logo, SearchBar, SearchInput, SearchButton, HeaderInfo, 
-  InfoIcon, InfoText, LocationInfo, LocationIcon, LocationText, Menu, MenuItem, MenuItemPrincipal,UserInfo, UserInfoItem} from'./styles';
+  InfoIcon, InfoText, LocationInfo, LocationIcon, LocationText, Menu, MenuItem, MenuItemPrincipal,UserInfo, UserInfoItem, 
+  LocationIconContainer, LocationTextCity} from'./styles';
 
 function Home() {
   return (
@@ -29,9 +30,12 @@ function Home() {
 
             <MenuContent>
               <LocationInfo>  
-                <LocationIcon src={location} alt="Localização"/>
-                <LocationText>Enviar para</LocationText>
-                <LocationText>Salvador 00000000</LocationText>
+              <LocationIcon src={location} alt="Localização"/>    
+              <LocationIconContainer>
+                  <LocationText>Enviar para</LocationText>              
+                  <LocationTextCity>Salvador 00000000</LocationTextCity>
+              </LocationIconContainer>
+               
               </LocationInfo>
 
               <Menu>               
@@ -49,7 +53,7 @@ function Home() {
                 <UserInfoItem>Crie a sua conta</UserInfoItem>
                 <UserInfoItem>Entre</UserInfoItem>
                 <UserInfoItem>Compras</UserInfoItem>
-                <FiShoppingCart/>
+                <FiShoppingCart size={20} color="#000000"/>
               </UserInfo>
 
             </MenuContent>

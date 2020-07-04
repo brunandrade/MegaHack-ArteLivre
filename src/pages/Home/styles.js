@@ -81,66 +81,110 @@ export const InfoText = styled.text`
 export const MenuContent = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
+    padding: 0 50px;
+    margin-top: 10px;
+    margin-right:110px;
+    margin-left:90px;
         
 `; 
 
 export const LocationInfo = styled.div`
-        
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
 `; 
 
+export const LocationIconContainer = styled.div`
+    display: flex;
+    flex-direction: column; 
+`; 
+
+
 export const LocationIcon = styled.img`
-        
+        width: 16.67px;
+        height: 25px;
+        margin-right:5px;
 `; 
 
 
 export const LocationText = styled.div`
-        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+`; 
+
+export const LocationTextCity = styled.div`
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
 `; 
 
 
 export const Menu = styled.div`
-        
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
 `; 
 
 export const MenuItem = styled.button`
 
     background-color: Transparent;
-    border: none;
-
+    border: 0;
     font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     color: #656565;
+    margin-right: 30px;
+
+    &:hover {
+        opacity:0.6;
+    } 
         
 `; 
 export const MenuItemPrincipal = styled.button`
-
+    width: 73px;
+    height: 18px;
     background: #1F6CDB;
     border-radius: 3px;
-
+    border:0;
     font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
     color: #FFF;
+
+    &:hover {
+        opacity:0.6;
+    } 
         
 `; 
 
 export const UserInfo = styled.div`
-        
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;   
 `; 
 
 export const UserInfoItem = styled.button`
 
     background-color: Transparent;
-    border: none;
-    
-    font-family: Roboto, sans-serif;
+    border:0;
+    margin-right: 30px;
+    font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 12px;
     color: #070707;
+
+    &:hover {
+        opacity:0.6;
+    } 
 `; 
