@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import HeaderComponent from '../Components/HeaderComponent'
 import {Container,Slider, PaymentInfo, Content, PaymentContainer, PaymentText, PaymentDescription,PaymentButton, 
   BlueBar,GrayBar, PaymentContent, HistoryText, HistoryButton, ProductContainer, HistoryTitle, Product, ProductBar, ProductPrice, ProductPriceText} from'./styles';
+import api from '../services/ml';
 
 function Home() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    api.get('/search?category=MLB1368').then((response) => {
+      setProducts(response.data.results);
+
+      console.log(products);
+    })
+}, []);
+  
+
+  // getProducts();
+
+  // async function getProducts(){
+  //   const response = await api.get('/search?category=MLB1368', {
+  //     products,
+  //   });
+  // }
+
   return (
       <Container>
           <HeaderComponent/>
