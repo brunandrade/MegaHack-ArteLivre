@@ -10,7 +10,7 @@ O Arte Livre é uma ação de marketing e plataforma dentro do Mercado Livre vol
 
 ## Time
 - Brenda Andrade - UX/UI Deseign
-- Geovany Nogueira - Business/Marketing
+- Giovany Nogueira - Business/Marketing
 - Bruna Andrade - Desenvolvedora
 - Leonardo Sena - Desenvolvedor
 - Tárcio Carvalho - Desenvolvedor
