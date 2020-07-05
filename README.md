@@ -2,7 +2,7 @@
 	<img style="display: block; margin: 20px auto; margin-right:300px;" src="https://i.ibb.co/sgPYPFN/logoo.jpg">
 </div>
 
-
+#Arte Livre
 
 ## Sobre
 
@@ -18,6 +18,7 @@ O projeto Arte livre foi desenvolvido pelo Time 25 para o desafio de Mercado Liv
 - Tárcio Carvalho - Desenvolvedor
 
 ## Aplicação
+<img style="display: block; margin: 20px auto;" src="https://i.ibb.co/pxw1PVB/prototipo.png">
 
 ## Desenvolvimento
 
