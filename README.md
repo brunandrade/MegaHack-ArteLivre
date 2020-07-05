@@ -1,6 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img style="display: block; margin: 20px auto" src="https://i.ibb.co/kK8WpyQ/ARTE-LIVRE-LOGO2.png">
 
-## Available Scripts
+
+## Sobre
 
 In the project directory, you can run:
 
