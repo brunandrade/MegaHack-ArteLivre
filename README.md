@@ -1,5 +1,5 @@
 <div style="display: block; align-items: center;">
-	<img style="display: block; margin: 20px auto; margin-right:300px;" src="https://i.ibb.co/2jB0YWw/logo.png">
+	<img style="display: block; margin: 20px auto; margin-right:300px;" src="https://i.ibb.co/sgPYPFN/logoo.jpg">
 </div>
 
 
