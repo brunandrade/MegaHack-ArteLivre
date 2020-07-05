@@ -11,11 +11,18 @@ export const Container = styled.div`
 `; 
 
 export const SliderSmall = styled.div`
-    width: 100;
+    width: 100%;
     height: 241px;
-    background: #1F6CDB;
+    display: flex; 
+    align-items: center;
+    justify-content: center;   
     
 `; 
+
+export const SliderImage= styled.img`
+
+`;
+
 
 export const Content = styled.div`
     display: flex;   
@@ -27,7 +34,7 @@ export const ArtMenu = styled.div`
     display: flex;   
     flex-direction: column;
     padding:20px;
-    margin-left:100px;
+    margin-left:210px;
 `; 
 
 export const Title = styled.p`
@@ -112,7 +119,7 @@ export const MenuButton = styled.button`
 
 export const ArtContainer = styled.div`
     display: flex;   
-    margin-left: 150px;
+    margin-left: 5px;
    
 `; 
 
@@ -170,8 +177,7 @@ export const ProductUser = styled.div`
     position:absolute;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: space-between;   
     align-items:center;
     width: 284px;
     height: 47px;
@@ -181,28 +187,68 @@ export const ProductUser = styled.div`
    
 `; 
 export const ImageContainer = styled.div`  
-    width: 52px;
-    height: 52px;
-    border: 1px solid;
-    border-color:#1F6CDB;
-    border-radius: 30px;
-    background-color:#FFF;
-    margin-bottom:20px;
+    margin-bottom: 20px;  
     
 `; 
 
 export const UserImage = styled.img`  
-    width: 52px;
-    height: 52px;
+    width: 110px;
+    height: 110px;    
+
 `; 
 
 export const UserName = styled.p` 
     position:absolute; 
     font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     letter-spacing: 0.015em;
-    padding:0 70px;
+    padding:0 100px;
     color: #FFFFFF;
+    text-transform: capitalize;
 `; 
+
+export const ModalContainer = styled.div`
+    display: flex;
+    flex-direction:column;
+    width: 575px;
+    height: 464px;
+    background: linear-gradient(359.47deg, #FFCC00 8.73%, rgba(255, 255, 255, 0) 147.11%), #FFFFFF;
+    border-radius: 6px;
+    align-items: center; 
+    justify-content: space-between;
+    position: absolute;
+    top: 25%;
+    left: 35%;    
+`; 
+
+
+export const ModalTitle = styled.div`
+    display: flex;
+    flex-direction:row;    
+`;
+
+export const ModalCloseButton = styled.div`
+    position: absolute;
+     margin-left:320px;
+     margin-top:10px;
+`;
+
+export const ModalLogo = styled.img`
+    margin-top:20px;
+    width: 164.57px;
+    height: 192.63px;
+    
+`; 
+
+export const ModalDescription = styled.p`
+    width: 444px;
+    height: 229px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125.69%;
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #000000;
+`;

@@ -1,14 +1,22 @@
 import React, {useEffect, useState} from 'react';
+import{Link} from 'react-router-dom';
 import user from '../../assets/artelivre.png';
+import logo from '../../assets/artelivre.png';
+import banner2 from '../../assets/banner2.jpg';
+import icon from '../../assets/logoIcon.png';
 import HeaderComponent from '../Components/HeaderComponent'
+import Modal from 'react-modal';
+import {FiXCircle} from 'react-icons/fi';
 import {Container, SliderSmall, Content, ArtMenu, ArtContainer, Title, Description, ProductImage,ProductImageContainer,
-  MenuSide, MenuItem, MenuButton, MenuText, MenuContent, ProductContainer, Bar, ProductPrice, ProductUser, UserImage,UserName, ImageContainer,ProductName} from'./styles';
+  MenuSide, MenuItem, MenuButton, MenuText, MenuContent, ProductContainer, Bar, ProductPrice, ProductUser,
+   UserImage,UserName, ImageContainer,ProductName, SliderImage, ModalContainer, ModalTitle, ModalLogo,ModalCloseButton, ModalDescription} from'./styles';
   import api from '../services/ml';
 
 
 function Products() {
   //CONSTANTS
   const [dadosCategoria, setDadosCategoria] = useState([]);
+  const [modal, setModal] = useState(true);
 
   //FUNCTIONS
   async function getSeller(seller_id) { 
@@ -33,7 +41,12 @@ function Products() {
   return (
       <Container>
           <HeaderComponent/>
-          <SliderSmall/>
+
+          <SliderSmall>
+            <SliderImage src={banner2}/>
+          </SliderSmall>
+         
+
 
         <Content>
           <ArtMenu>
@@ -84,12 +97,14 @@ function Products() {
               <Bar/>
               <ProductPrice>R$ {product.price}</ProductPrice>
               <ProductName>{product.title}</ProductName>
+
               <ProductUser>
-              <ImageContainer>
-                  <UserImage src={user} alt="produto"/>
-                </ImageContainer>
-                <UserName>{product.sellerNickname}</UserName>
+                  <ImageContainer>
+                      <UserImage src={icon} alt="produto"/>
+                  </ImageContainer>
+                  <UserName>{product.sellerNickname}</UserName>
               </ProductUser>
+
               </ProductContainer>
 
             ))
@@ -100,6 +115,23 @@ function Products() {
             
           </ArtContainer>
         </Content>
+
+        
+      <Modal className="modal" isOpen={modal} onRequestClose={()=> setModal(false)}>
+            <ModalContainer>
+              <ModalTitle>
+                <ModalLogo src={logo}/>
+                <ModalCloseButton>
+                  <Link  onClick={()=>setModal(false)} to="/artelivre">
+                      <FiXCircle size={30} color="black"/>
+                  </Link>
+                </ModalCloseButton>               
+              </ModalTitle>
+              <ModalDescription>Ao mesmo tempo em que eventos, feiras e a circulação de pessoas nas ruas reduziu, o consumo de arte começou a aumentar. Muitos profissionais vendiam seus trabalhos nas ruas e agora estão impedidos de fazer isso, pensando nisso, surgiu o Arte Livre, que tem como propósito promover os trabalhos de artistas de todos os lugares do Brasil e assim criar uma nova fonte de renda para eles. 
+              Contribua com o trabalho de um artista brasileiro e mantenha vivo o sonho dele!</ModalDescription>               
+                  
+            </ModalContainer>                       
+        </Modal>
 
 
       </Container>

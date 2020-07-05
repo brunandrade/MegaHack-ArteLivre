@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
+import{Link} from 'react-router-dom';
 import logo from '../../assets/artelivre.png';
 import user from '../../assets/userImage.svg';
+import Modal from 'react-modal';
 import HeaderComponent from '../Components/HeaderComponent'
-import { FiGlobe, FiSidebar, FiMessageCircle, FiStar, FiArchive} from 'react-icons/fi';
+import { FiGlobe, FiSidebar, FiMessageCircle, FiStar, FiArchive, FiHelpCircle,FiXCircle} from 'react-icons/fi';
 import {Container,Content,ContentHeader ,Title, HelpButton, ShopContainer, SalesContainer, ArteLivreButton, ArteLogo,
-  ShopProfile, ShopIcon, ShopName, Bar, ShopInfo, ShopImage, Info, InfoText, SalesHeader, SalesTitle, SalesBar, SalesInfo, SaleData, Quantity, SalesDataBar, DataTitle} from'./styles';
+  ShopProfile, ShopIcon, ShopName, Bar, ShopInfo, ShopImage, Info, InfoText, SalesHeader, SalesTitle, SalesBar, SalesInfo, SaleData,
+   Quantity, SalesDataBar, DataTitle, SalesDataHeader, ModalContainer, ModalTitle, ModalLogo,ModalCloseButton, 
+   ModalInputs, ModalSelect, Option, ModalInputText, ModalDescription, ModalCheckbox, Check, ModalButton} from'./styles';
+    
 function Profile() {
+  const [modal, setModal] = useState(false);
   return (
     <Container>
       <HeaderComponent />
@@ -14,10 +20,13 @@ function Profile() {
         <ContentHeader>
           <Title>Mercado Shops</Title>
 
-          <ArteLivreButton>
-            <ArteLogo src={logo}/>
-            Junte-se ao Arte Livre
-            </ArteLivreButton>
+          <Link  onClick={()=>setModal(true)} to="/loja">
+            <ArteLivreButton>
+              <ArteLogo src={logo}/>
+              Junte-se ao Arte Livre
+              </ArteLivreButton>
+          </Link>
+         
           <HelpButton>Preciso de ajuda</HelpButton>
         </ContentHeader>
        
@@ -70,20 +79,30 @@ function Profile() {
 
           <SalesInfo>
             <SaleData>
-              <DataTitle>Visitas</DataTitle>
-              <Quantity>100</Quantity>
+              <SalesDataHeader>              
+                <DataTitle>Visitas</DataTitle>
+                <FiHelpCircle size={20} color="#1F6CDB"/>
+              </SalesDataHeader>            
+             
+              <Quantity>0</Quantity>
             </SaleData>
             <SalesDataBar/>
 
-            <SaleData>
+            <SaleData>              
+              <SalesDataHeader>              
               <DataTitle>Conversões</DataTitle>
-              <Quantity>20</Quantity>
+                <FiHelpCircle size={20} color="#1F6CDB"/>
+              </SalesDataHeader>   
+              <Quantity>0</Quantity>
             </SaleData>
             <SalesDataBar/>
 
             <SaleData>
+            <SalesDataHeader>              
               <DataTitle>Taxa de conversão</DataTitle>
-              <Quantity>35%</Quantity>
+                <FiHelpCircle size={20} color="#1F6CDB"/>
+              </SalesDataHeader>               
+              <Quantity>0%</Quantity>
             </SaleData>
            
           </SalesInfo>
@@ -92,6 +111,45 @@ function Profile() {
 
         </SalesContainer>
       </Content>
+
+      <Modal className="modal" isOpen={modal} onRequestClose={()=> setModal(false)}>
+            <ModalContainer>
+              <ModalTitle>
+                <ModalLogo src={logo}/>
+                <ModalCloseButton>
+                  <Link  onClick={()=>setModal(false)} to="/loja">
+                      <FiXCircle size={30} color="white"/>
+                  </Link>
+                </ModalCloseButton>               
+              </ModalTitle>
+
+              <ModalInputs>
+                <ModalInputText>Selecione sua ocupação</ModalInputText>
+                <ModalSelect>
+                  <Option>Selecione</Option>
+                  <Option>Autônomo</Option>
+                  <Option>Comerciante Local</Option>
+                  <Option>Artesão</Option>
+                  <Option>Comunidade de Artesãoes</Option>
+                  <Option>Artista independente</Option>
+                </ModalSelect>
+
+                <ModalInputText>Nos conte sobre sua jornada</ModalInputText>
+                <ModalDescription/>
+
+                <ModalCheckbox>
+                  <Check type="checkbox"/>
+                  <ModalInputText>Declaro que sou um pequeno comerciante/ <br/> artesão / autonômo do setor criativo.</ModalInputText>
+                </ModalCheckbox>
+              </ModalInputs>
+
+              <Link  onClick={()=>setModal(false)} to="/loja">
+                <ModalButton>Solicitar Cadastro</ModalButton>
+              </Link>      
+            </ModalContainer>                       
+        </Modal>
+
+       
     </Container>
     
   );
