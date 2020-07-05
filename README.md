@@ -1,14 +1,12 @@
 <div style="display: block; align-items: center;">
-	<img style="display: block; margin: 20px auto; margin-right:300px;" src="https://i.ibb.co/sgPYPFN/logoo.jpg">
+	<img style="display: block; margin: 20px auto;" src="https://i.ibb.co/VNPkrN8/teste.png">
 </div>
-
-#Arte Livre
 
 ## Sobre
 
-O projeto Arte livre foi desenvolvido pelo Time 25 para o desafio de Mercado Livre do MegaHack 3.0.
+O projeto Arte livre foi desenvolvido pelo Time 25 para o desafio do Mercado Livre do MegaHack 3.0.
 
-É uma ação de marketing e plataforma dentro do Mercado Livre voltada para o viés social e solidário. O Arte Livre tem como finalidade apoiar e promover de forma justa os profissionais que trabalham com com a economia criativa do país e foram afetados pela pandemia. São eles: os artesãos de pequenas comunidades nos interiores do Brasil, profissionais que trabalham com a criatividade e comércios locais do mesmo setor. A plataforma vai permitir maior alcance, reconhecimento, divulgação e vendas desses pequenos comerciantes.
+O Arte Livre é uma ação de marketing e plataforma dentro do Mercado Livre voltada para o viés social e solidário. O Arte Livre tem como finalidade apoiar e promover de forma justa os profissionais que trabalham com com a economia criativa do país e foram afetados pela pandemia. São eles: os artesãos de pequenas comunidades nos interiores do Brasil, profissionais que trabalham com a criatividade e comércios locais do mesmo setor. A plataforma vai permitir maior alcance, reconhecimento, divulgação e vendas desses pequenos comerciantes.
 
 ## Time
 - Brenda Andrade - UX/UI Deseign
