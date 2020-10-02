@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="" title="" src="mockup/logo.png">
+    <img height="250" src="src/assets/artelivre.png">
 </h1>
 
 <h2 align="center"> O projeto Arte livre foi desenvolvido pelo Time 25 para o desafio do Mercado Livre do MegaHack 3.0. </h2>
