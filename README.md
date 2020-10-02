@@ -1,5 +1,5 @@
 <h1 align="center">
-    Arte Livre
+    <img alt="" title="" src="mockup/logo.png">
 </h1>
 
 <h2 align="center"> O projeto Arte livre foi desenvolvido pelo Time 25 para o desafio do Mercado Livre do MegaHack 3.0. </h2>
@@ -24,6 +24,7 @@ O Arte Livre é uma ação de marketing e plataforma dentro do Mercado Livre vol
   <img alt="" title="" src="mockup/mockup-3.png">
   <img alt="" title="" src="mockup/mockup-4.png">
 </p>
+
 ## Desenvolvimento
 
 O projeto Arte Livre foi desenvolvimento utilizando a linguagem JavaScript e o framework React.js, além de utilizar HTML e CSS para toda a esturura da página.<br />
