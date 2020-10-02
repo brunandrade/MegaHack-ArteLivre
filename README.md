@@ -4,7 +4,7 @@
 
 ## Sobre
 
-O projeto Arte livre foi desenvolvido pelo Time 25 para o desafio do Mercado Livre do MegaHack 3.0.
+O projeto Arte livre foi desenvolvido pelo Time 25 para o desafio do Mercado Livre do MegaHack 3.0 em 2020.
 
 O Arte Livre é uma ação de marketing e plataforma dentro do Mercado Livre voltada para o viés social e solidário. O Arte Livre tem como finalidade apoiar e promover de forma justa os profissionais que trabalham com com a economia criativa do país e foram afetados pela pandemia. São eles: os artesãos de pequenas comunidades nos interiores do Brasil, profissionais que trabalham com a criatividade e comércios locais do mesmo setor. A plataforma vai permitir maior alcance, reconhecimento, divulgação e vendas desses pequenos comerciantes.
 
