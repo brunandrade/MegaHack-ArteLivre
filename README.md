@@ -14,11 +14,14 @@ O Arte Livre é uma ação de marketing e plataforma dentro do Mercado Livre vol
 
 - Brenda Andrade - UX/UI Deseign
 - Giovany Nogueira - Business/Marketing
-- Bruna Andrade - Desenvolvedora
-- Leonardo Sena - Desenvolvedor
-- Tárcio Carvalho - Desenvolvedor
+- [Bruna Andrade](https://github.com/brunandrade/) - Desenvolvedora
+- [Leonardo Sena](https://github.com/leosena21/) - Desenvolvedor
+- [Tárcio Carvalho](https://github.com/Tarcioc2/) - Desenvolvedor
 
 ## Aplicação
+
+
+<img style="display: block; margin: 20px auto;" src="https://i.ibb.co/pxw1PVB/prototipo.png">
 
 <p align="center">
   <img alt="" title="" src="mockup/mockup-1.png">
@@ -26,6 +29,7 @@ O Arte Livre é uma ação de marketing e plataforma dentro do Mercado Livre vol
   <img alt="" title="" src="mockup/mockup-3.png">
   <img alt="" title="" src="mockup/mockup-4.png">
 </p>
+
 
 ## Desenvolvimento
 
