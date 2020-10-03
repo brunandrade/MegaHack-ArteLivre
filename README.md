@@ -2,7 +2,9 @@
     <img height="250" src="src/assets/artelivre.png">
 </h1>
 
-<h2 align="center"> O projeto Arte livre foi desenvolvido pelo Time 25 para o desafio do Mercado Livre do MegaHack 3.0. </h2>
+<h2 align="center"> O projeto Arte livre foi desenvolvido pelo Time 25 para o desafio do Mercado Livre do MegaHack 3.0 em 2020. </h2>
+
+
 
 ## Sobre
 
